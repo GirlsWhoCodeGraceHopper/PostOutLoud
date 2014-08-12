@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PostOutLoud</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+			
+			<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+			<style>
+				body {
+					font-family: 'Droid Serif', serif;
+					font-size: 14px;
+					}
+    </style>
+		
+		<script>
+			//jQuery and JavaScript goes here
+			function Post(creator, content, date) {
+				this.creator = creator;
+				this.content = content;
+				this.date = date;
+
+			}
+
+
+			function PostList() {
+				this.postList = [];
+				
+				this.display = function () {
+					//how to display each post in html   
+				};
+
+				this.addPost = function (post) {
+					this.postList.push(post);
+
+					};
+			}
+
+			var newPostList = new PostList();
+
+			
+		</script>
+	</head>
+	
+	
+	
+	<body style="background-color:#F0FFF0;">
+		<!-- First Page of App -->
+		<div data-role = "page" id="HomePage">
+			<div data-role="header"><h1 style="font-family:Permanent Marker"><center>
+				<font size=80px>P</font><font size=50px>ost</font><font size=80px>O</font><font size=50px>ut</font><font size=80px>L</font><font size=50px>oud</font>
+				</center>
+				</h1>
+				
+				
+				<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+					<script>
+
+						var c = document.getElementById("myCanvas");
+						var ctx = c.getContext("2d");
+						ctx.beginPath();
+						ctx.arc(95,50,40,0,2*Math.PI);
+						ctx.stroke();
+
+					</script> 
+				
+			</div>	
+			<div data-role = "content">
+				<p>hi</p>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
