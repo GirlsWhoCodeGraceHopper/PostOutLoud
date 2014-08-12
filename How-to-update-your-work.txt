@@ -2,8 +2,8 @@
 ...aka How to save your work on the internet for all your group members to see :)
 
 1. Click on "Show" next to "Uncommited changes" at the top of the middle column of GitHub desktop application.
-2. Write a sentence or short list of the things that you updated since the last time you updated your work 
+2. In the summary section, write a sentence or short list of the things that you updated since the last time you updated your work 
    (ex. adding JavaScript file that implements the first stage of To Do List - creates classes ToDoList and Task)
-3. Write a longer description of the changes you made, including new files.
+3. In the description section, write a longer description of the changes you made, including new files.
 4. Click "Commit to master" button.
 5. Click "Sync" at the top right of the GitHub desktop application.
