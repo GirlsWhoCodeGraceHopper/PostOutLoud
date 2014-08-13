@@ -7,14 +7,56 @@
 			
 			<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 			<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+			
 			<style>
 				body {
 					font-family: 'Droid Serif', serif;
 					font-size: 14px;
 					}
 			</style>
-		
-		
+			
+			<style scoped>
+
+				.button-success,
+				.button-error {
+					color: white;
+					border-radius: 4px;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				}
+
+				.button-success {
+					background: rgb(28, 184, 65); /* this is a green */
+					font-size: 150%;
+				}
+
+				.button-error {
+					background: rgb(202, 60, 60); /* this is a maroon */
+					font-size: 150%;
+				
+				}
+			</style>
+					
+		<style>
+			input[type=text] {padding:100 px; border:1px solid #ccc; 
+			-webkit-border-radius: 400 px;
+				border-radius: 100px;
+			}
+ 
+			 input[type=text]:focus {border-color:#333; }
+
+ 
+			input[type=submit] {
+				border: 1px solid #f44c0e;
+				color: #fff;
+				background: tomato;
+				padding: 20px 50px;
+				border-radius: 15px;
+			}
+			input[type=submit]:hover {
+				background: #f44c0e;
+			}
+
+		</style>
 		
 		<script>
 			//jQuery and JavaScript goes here
@@ -50,29 +92,11 @@
 	<body style="background-color:#F0FFF0;">
 		<!-- First Page of App -->
 		
-		<div data-role="page" id="HomePage">
+		<div data-role="page" id="NewPostPage">
 			
 			
 			<div data-role="header">
-					<style scoped>
-
-						.button-success,
-						.button-error {
-							color: white;
-							border-radius: 4px;
-							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-						}
-
-						.button-success {
-							background: rgb(28, 184, 65); /* this is a green */
-							font-size: 150%;
-						}
-
-						.button-error {
-							background: rgb(202, 60, 60); /* this is a maroon */
-							font-size: 150%;
-						}
-					</style>
+					 
 
 					<br></br>
 					<button style="margin-left: 10%" class="button-success pure-button">
@@ -86,10 +110,70 @@
 				</div>
 			
 			 
+					<br></br>
+					<br></br>
+					<br></br>
 
 			<div data-role = "content">
-					<p>hi</p>
+				 <form class="pure-form pure-form-aligned">
+					<fieldset>
+					
+						<div style="margin-left: 10%" class="pure-control-group">
+							
+							<label for="name">Display Name</label>
+							<input id="name" type="text" placeholder="Display Name">
+						</div>
+						
+						<div style="margin-left: 25%">
+							<font size="2px"> Choose a Display Name that you'd like to post under! Your display name will be public. </font>
+						</div>
+						
+						<br><br><br><br>
+						<div  style="margin-left: 10%" class="pure-control-group">
+							<label for="email">Email Address</label>
+							<input id="email" type="email" placeholder="you@email.com">
+						</div>
+						
+						 <div  style="margin-left: 25%" style="line-height:3px;">
+						  <font size="2px">
+							Your email address will be used like a password for this post;  
+							<br></br>As this post's author, only you will know what email you entered here.  
+							<br></br>If you would ever like to edit or delete your post, 
+							you will be asked to enter this email again to ensure that only you can make these changes.</font>
+
+						 </div>
+						 
+						 <div style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group"> <br><br><br><br>
+							<label for="title">Post Title</label>
+							<input id="title" type="text" placeholder="Your Post's Title">
+						</div>
+						  <br><br><br> 
+						  
+						 <div  style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group">
+						  <label  for="post" >Your Post</label>
+
+							<textarea id="post" type="text" style="margin-left: 0px" rows="7" cols="90">  
+							</textarea>
+						 </div>
+						  
+						  
+						  
+						<div style="margin-left:25%" class="pure-controls">
+							<label for="cb" class="pure-checkbox">
+								<input id="cb" type="checkbox"> I've read the terms and conditions
+							</label>
+							
+						<br><br><br><br>
+						 <input type="submit" value="Submit!"/>
+						<br><br><br><br><br><br><br><br><br><br>
+						
+
+					</fieldset>
+				</form>				
 			</div>
+ 
+					 
+ 
 		
 		</div>
 		
