@@ -3,8 +3,9 @@
 	<head>
 		<title>PostOutLoud</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
- 
 			
+			
+			<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 			<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
 			<style>
 				body {
@@ -13,28 +14,6 @@
 					}
 			</style>
 		
-		
-			<style type="text/css">
-
-					#layer1 {
-					position: absolute;
-					height:90px;
-					width:90px;
-					left:0px;
-					top:100px;
-					z-index: 2;
-					}
-
-					#layer2 {
-					position: absolute;
-					height:90px;
-					width:90px;
-					left:10px;
-					top:100px;
-					z-index: 1;
-					}
-
-			</style>
 		
 		
 		<script>
@@ -70,33 +49,94 @@
 	
 	<body style="background-color:#F0FFF0;">
 		<!-- First Page of App -->
-		<div data-role = "page" id="HomePage">
+		
+		<div data-role="page" id="HomePage">
+			
+			
+			<div data-role="header">
+					<style scoped>
+
+						.button-success,
+						.button-error {
+							color: white;
+							border-radius: 4px;
+							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+						}
+
+						.button-success {
+							background: rgb(28, 184, 65); /* this is a green */
+							font-size: 150%;
+						}
+
+						.button-error {
+							background: rgb(202, 60, 60); /* this is a maroon */
+							font-size: 150%;
+						}
+					</style>
+
+					<br></br>
+					<button style="margin-left: 10%" class="button-success pure-button">
+						<font style="font-family:Arial;font-weight: bold" >New Post</font>
+					</button>
+					<button style="margin-left: 10%"class="button-error pure-button">
+						<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+					</button>
+					<img style="margin-left: 60%" src="http://s28.postimg.org/8w831dznh/FINALEVER.png"></h1>
+			
+				</div>
+			
 			 
-				
-					<canvas id="layer1" width="200" height="100" style="border:0px solid #d3d3d3;"></canvas>
-						
-				
-				
-				
-					<div id="layer2" data-role="header"><h1 style="font-family:Permanent Marker"><center>
-					<font size=80px>P</font><font size=50px>ost</font><font size=80px>O</font><font size=50px>ut</font><font size=80px>L</font><font size=50px>oud</font>
-					</center>
-					</h1>
-				
 
-				 
-
-				 
-					
-					
-					
-				
-			</div>	
 			<div data-role = "content">
-				<p>hi</p>
+					<p>hi</p>
+			</div>
+		
+		</div>
+		
+		
+		<!-- ADD POST PAGE-->
+		<div data-role="page" id="NewPostPage">
+			<div data-role = "header">
+				<style scoped>
+
+							.button-success,
+							.button-error {
+								color: white;
+								border-radius: 4px;
+								text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+							}
+
+							.button-success {
+								background: rgb(28, 184, 65); /* this is a green */
+								font-size: 150%;
+							}
+
+							.button-error {
+								background: rgb(202, 60, 60); /* this is a maroon */
+								font-size: 150%;
+							}
+				</style>
+
+						<br></br>
+						<button style="margin-left: 10%" class="button-success pure-button">
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button>
+						<button style="margin-left: 10%"class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+						<img style="margin-left: 60%" src="http://s28.postimg.org/8w831dznh/FINALEVER.png"></h1>
+				
+			</div>
+				
+				 
+
+			<div data-role = "content">
+				
 			</div>
 		</div>
 		
+		
+
 	</body>
 </html>
 
