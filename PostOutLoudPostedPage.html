@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PostOutLoud</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			
+			<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+			<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+			<style>
+				body {
+					font-family: 'Droid Serif', serif;
+					font-size: 14px;
+					}
+			</style>
+		
+		
+		
+		<script>
+			//jQuery and JavaScript goes here
+			function Post(creator, content, date) {
+				this.creator = creator;
+				this.content = content;
+				this.date = date;
+
+			}
+
+
+			function PostList() {
+				this.postList = [];
+				
+				this.display = function () {
+					//how to display each post in html   
+				};
+
+				this.addPost = function (post) {
+					this.postList.push(post);
+
+					};
+			}
+
+			var newPostList = new PostList();
+
+			
+		</script>
+	</head>
+	
+	
+	
+	<body style="background-color:#F0FFF0;">
+		<!-- First Page of App -->
+		
+		<div data-role="page" id="HomePage">
+			
+			
+			<div data-role="header">
+					<style scoped>
+
+						.button-success,
+						.button-error {
+							color: white;
+							border-radius: 4px;
+							text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+						}
+
+						.button-success {
+							background: rgb(69, 139, 0); /* this is a green */
+							font-size: 150%;
+						}
+
+						.button-error {
+							background: rgb(69, 139, 0); /* this is a maroon */
+							font-size: 150%;
+						}
+					</style>
+
+					<br></br>
+					<center>
+					<img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"><br>
+					<button /*style="margin-left: 65%"*/ class="button-success pure-button">
+						<font style="font-family:Arial;font-weight: bold" >New Post</font>
+					</button>
+					<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+						<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+					</button>
+					</center>
+					</h1>
+				</div>
+			 
+
+			<div data-role = "content">
+			<center>
+				<div style="
+					border:2px solid #458B00;
+					margin-top:20px;
+					align-center;
+					font-size:15px;
+					padding:10px 40px; 
+					background: #BCED91;
+					border-radius:25px;">
+					<h1>TITLE</h1>
+						<p>This is a wonderful post about the jooy of using Sakura pens !</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel augue orci. Curabitur mattis aliquam justo at fringilla. Nunc volutpat orci vel sollicitudin varius. Proin ut elit non lorem varius adipiscing. Cras dignissim ullamcorper quam lacinia mattis. Vivamus a sem commodo, congue lacus eget, viverra justo. Pellentesque pulvinar, augue et dapibus tristique, lorem quam condimentum magna, a tincidunt tellus erat eu felis. Fusce euismod nisl vel vehicula sodales. Ut pretium felis in egestas condimentum. Curabitur ac hendrerit dolor, vel imperdiet turpis. Pellentesque tincidunt mi massa, quis placerat massa tristique sed. Sed porttitor mi id tortor fermentum, id auctor neque blandit. In posuere ut erat a iaculis.
+
+						Donec ac ante nec quam auctor sagittis vitae ut nisi. Cras ut mi risus. Nam semper massa non tincidunt fringilla. Donec posuere cursus tempor. Nullam ac porttitor augue, sed ultrices augue. Mauris tempor semper ligula, a bibendum enim bibendum vel. Etiam accumsan ornare urna laoreet euismod. Curabitur fermentum ac leo id vulputate. Donec nec velit lacinia, varius quam eget, tristique urna. Duis malesuada erat a bibendum pretium. Duis eget lorem dui.
+
+						Cras pellentesque eu urna et eleifend. Nam a vehicula magna, eu convallis tellus. Aenean vel aliquet risus. Integer in lacus dapibus libero fringilla ornare. Nunc accumsan vestibulum mauris a pretium. Integer in nibh vel lectus pulvinar fringilla ultrices hendrerit diam. Curabitur at tempor arcu. Etiam aliquam pellentesque urna, nec semper ante volutpat eget. Quisque diam massa, aliquet porta risus nec, rutrum semper massa. Donec lobortis, risus ut dignissim laoreet, purus neque porttitor lacus, id eleifend massa ligula eu nibh. Vivamus eu sollicitudin libero. Nam facilisis sapien quis erat pellentesque ullamcorper. Donec quis sem vitae mi iaculis ultricies.</p>
+				</div>
+			</center>
+			</div>
+		
+		</div>
+		
+	
+		</div>
+		
+		
+
+	</body>
+</html>
+
