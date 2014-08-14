@@ -2,10 +2,14 @@
 console.log("testing"); 
 var newPostList;
 $(document).ready(function(){
-	  $("#enter").click(function(){ 
-		console.log("click"); 
-		newPostList = new PostList();
-		var name= $("input:displayname").val();
+	  $("#enter").click(function(){  
+		var name= $("#displayname").val();
+		var email= $("#email").val();
+		var title= $("#title").val();
+		var post= $("#post").val();
+		alert(name + email + title + post)
+
+
 	});
 });
 
@@ -34,7 +38,7 @@ function PostList() {
 	};
 }
 	
-$("#TESTING").click(function(){ 
+$("#enter").click(function(){ 
 	console.log("click"); 
 	newPostList = new PostList();
 	//var name = $("displayname").val();
