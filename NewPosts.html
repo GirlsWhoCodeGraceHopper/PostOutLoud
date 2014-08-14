@@ -59,14 +59,14 @@
 			 input[type=text]:focus {border-color:#333; }
 
  
-			input[type=submit] {
+			input[type=button] {
 				border: 1px solid #f44c0e;
 				color: #fff;
 				background: tomato;
 				padding: 20px 50px;
 				border-radius: 15px;
 			}
-			input[type=submit]:hover {
+			input[type=button]:hover {
 				background: #f44c0e;
 			}
 
@@ -137,7 +137,7 @@
 					
 						<div style="margin-left: 10%" class="pure-control-group">
 							<label for="name">Display Name</label>
-							<input type="text"  id= "displayname" placeholder="Display Name"> 
+							<input type="text"  id= "displayname" placeholder="Display Name" required> 
 						</div>
 						
 						<div style="margin-left: 25%">
@@ -148,44 +148,43 @@
 						
                         <div  style="margin-left: 10%" class="pure-control-group">
 							<label for="email">Email Address</label>
-							<input id="email" type="email"  placeholder="you@email.com">
+							<input id="email" type="email"  placeholder="you@email.com" required>
 						</div>
 						
 						<div  style="margin-left: 25%" style="line-height:3px;">
 						  <font size="2px">
 							Your email address will be used like a password for this post;  
-							<br></br>As this post's author, only you will know what email you entered here.  
-							<br></br>If you would ever like to edit or delete your post, 
+							<br> As this post's author, only you will know what email you entered here.  
+							<br> If you would ever like to edit or delete your post, 
 							you will be asked to enter this email again to ensure that only you can make these changes.</font>
    
 						 </div>
 						 
 						 <div style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group"> <br><br><br><br>
 							<label for="title">Post Title</label>
-							<input id="title" type="text" placeholder="Your Post's Title">
+							<input id="title" type="text" placeholder="Your Post's Title" required>
 						</div>
 						  
                           <br><br><br> 
 						  
 						 <div  style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group">
 						  <label  for="post" >Your Post</label>
-							<textarea id="post" type="text" value="" style="margin-left: 0px" rows="7" cols="70">  
-							</textarea>
+							<textarea id="post" rows="10px" cols="90px" required></textarea>
 						 </div>
 						  
 
 						<div style="margin-left:25%" class="pure-controls">
 							<label for="cb" class="pure-checkbox">
-								<input id="cb" type="checkbox"> I've read the terms and conditions
+								<input id="cb" type="checkbox" required> I've read the terms and conditions
 							</label>
 							
 								<br><br><br><br>
                         </div>
                         
-						<div>
+						<div style="margin-left:25%">
 						 	<!--input type="submit" id="enter" value="Submit!"-->
 							<a href="#HomePage" style="text-decoration:none">
-							<input type="button" value="Submit" id="enter">
+							<input type="button" value="Submit" id="enter" >
 							</a>
 								<br><br><br><br><br><br><br><br><br><br>
 						
