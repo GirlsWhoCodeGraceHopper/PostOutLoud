@@ -1,4 +1,4 @@
- 
+    
 console.log("testing"); 
 var newPostList;
 $(document).ready(function(){
