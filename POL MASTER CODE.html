@@ -1,1 +1,333 @@
-ss
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PostOutLoud</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+		
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+			
+		<style>
+			body {
+				font-family: 'Droid Serif', serif;
+				font-size: 14px;
+				}
+		</style>
+		
+		<style scoped>
+
+				.button-success,
+				.button-error {
+					color: white;
+					border-radius: 4px;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				}
+
+				.button-success {
+					background: rgb(28, 184, 65); /* this is a green */
+					font-size: 150%;
+				}
+
+				.button-error {
+					background: rgb(202, 60, 60); /* this is a maroon */
+					font-size: 150%;
+				
+				}
+		</style>
+        
+        <style>
+			input[type=text] {padding:100 px; border:1px solid #ccc; 
+			-webkit-border-radius: 400 px;
+				border-radius: 100px;
+			}
+ 
+			 input[type=text]:focus {border-color:#333; }
+
+ 
+			input[type=submit] {
+				border: 1px solid #f44c0e;
+				color: #fff;
+				background: tomato;
+				padding: 20px 50px;
+				border-radius: 15px;
+			}
+			input[type=submit]:hover {
+				background: #f44c0e;
+			}
+
+		</style>
+		
+		<script>
+			//jQuery and JavaScript goes here
+			function Post(creator, content, date) {
+				this.creator = creator;
+				this.content = content;
+				this.date = date;
+
+			}
+
+
+			function PostList() {
+				this.postList = [];
+				
+				this.display = function () {
+					//how to display each post in html   
+				};
+
+				this.addPost = function (post) {
+					this.postList.push(post);
+
+					};
+			}
+
+			var newPostList = new PostList();
+
+			
+		</script>
+	</head>
+	
+	
+	
+    
+    
+    
+    
+    
+	<body style="background-color:#F0FFF0;">
+		
+		<!-- Home Page of App -->
+		
+		<div data-role="page" id="HomePage">
+		 		
+            <!-- Header of App -->
+
+			<div data-role="header">
+				<style scoped>
+
+					.button-success,
+					.button-error {
+						color: white;
+						border-radius: 4px;
+						text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+					}
+
+					.button-success {
+						background: rgb(69, 139, 0); /* this is a green */
+						font-size: 150%;
+					}
+
+					.button-error {
+						background: rgb(69, 139, 0); /* this is a maroon */
+						font-size: 150%;
+					}
+				</style>
+
+				<br></br>
+				
+				<center>
+					<img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"><br>
+						<button /*style="margin-left: 65%"*/ class="button-success pure-button">
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button>
+						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+				</center>
+				 
+			</div>
+			 
+
+			<div data-role = "content">
+				<style>
+					.container{
+					height:1000px;
+					width:100%;
+					text-align:center;
+					}
+					.container div{
+					display: inline-block;
+					vertical-align: middle;
+					} 
+					 .column-left{ float: left; width: 33%;  height:1000px;}
+					.column-right{ float: right; width: 33%;  height:1000px; border-right: 2px dotted #ccc;}
+					.column-center{ display: inline-block; width: 33%; height:1000px;}
+				</style>
+
+				<div class="container">
+					    <div class="column-left">
+							<img src="http://s3.postimg.org/4pg6r2nhf/jix_ELEqd_T.png" height=500 width=500>		
+					    </div>
+					    <div class="column-center">
+							<img src="http://s27.postimg.org/50v8a63wz/postit_hover3.png" height=500 width=500>		
+					    </div>
+					    <div class="column-right">
+							<img src="http://s29.postimg.org/flzxuwbvr/green_note.png" height=500 width=500>		
+					    </div>
+				</div> 
+					
+					
+			</div>
+		
+		</div>
+        
+        <!-- End of Homepage -->
+
+		
+		<!-- New Posts Page of App -->
+
+		<div data-role="page" id="NewPostsPage">
+		
+            <!-- Header of App -->
+  
+			<div data-role="header">
+ 
+				<br></br>
+				
+				<center>
+					<img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"><br>
+						<button /*style="margin-left: 65%"*/ class="button-success pure-button">
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button>
+						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+				</center>
+				 
+			</div>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+
+			<div data-role = "content">
+            
+            <!-- Form to Submit -->
+
+				 <form class="pure-form pure-form-aligned">
+					<fieldset>
+					
+						<div style="margin-left: 10%" class="pure-control-group">
+							<label for="name">Display Name</label>
+							<input id="name" type="text" placeholder="Display Name">
+						</div>
+						
+						<div style="margin-left: 25%">
+							<font size="2px"> Choose a Display Name that you'd like to post under! Your display name will be 					public. </font>
+						</div>
+						
+						<br><br><br><br>
+						
+                        <div  style="margin-left: 10%" class="pure-control-group">
+							<label for="email">Email Address</label>
+							<input id="email" type="email" placeholder="you@email.com">
+						</div>
+						
+						 <div  style="margin-left: 25%" style="line-height:3px;">
+						  <font size="2px">
+							Your email address will be used like a password for this post;  
+							<br></br>As this post's author, only you will know what email you entered here.  
+							<br></br>If you would ever like to edit or delete your post, 
+							you will be asked to enter this email again to ensure that only you can make these changes.</font>
+
+						 </div>
+						 
+						 <div style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group"> <br><br><br><br>
+							<label for="title">Post Title</label>
+							<input id="title" type="text" placeholder="Your Post's Title">
+						</div>
+						  
+                          <br><br><br> 
+						  
+						 <div  style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group">
+						  <label  for="post" >Your Post</label>
+							<textarea id="post" type="text" style="margin-left: 0px" rows="7" cols="70">  
+							</textarea>
+						 </div>
+						  
+
+						<div style="margin-left:25%" class="pure-controls">
+							<label for="cb" class="pure-checkbox">
+								<input id="cb" type="checkbox"> I've read the terms and conditions
+							</label>
+							
+								<br><br><br><br>
+                        </div>
+                        
+						 	<input type="submit" value="Submit!"/>
+								<br><br><br><br><br><br><br><br><br><br>
+						
+						 
+						</fieldset>
+				</form>				
+			 
+ 			</div>
+		          <!-- Bottom of Form and Page -->
+
+	  <!--posted page-->
+      
+      <div data-role="page" id="PostedPage">
+		 		
+            <!-- Header of App -->
+
+			<div data-role="header">
+				<style scoped>
+
+					.button-success,
+					.button-error {
+						color: white;
+						border-radius: 4px;
+						text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+					}
+
+					.button-success {
+						background: rgb(69, 139, 0); /* this is a green */
+						font-size: 150%;
+					}
+
+					.button-error {
+						background: rgb(69, 139, 0); /* this is a maroon */
+						font-size: 150%;
+					}
+				</style>
+
+				<br></br>
+				
+				<center>
+					<img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"><br>
+						<button /*style="margin-left: 65%"*/ class="button-success pure-button">
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button>
+						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+				</center>
+				 
+			</div>
+            
+            <div data-role = "content">
+			<center>
+				<div style="
+					border:2px solid #458B00;
+					margin-top:20px;
+					margin-left:20%;
+					margin-right:20%;
+					align-center;
+					font-size:15px;
+					padding:10px 40px; 
+					background: #BCED91;
+					border-radius:25px;">
+					<h1>TITLE</h1>
+						<p>This is a wonderful post about the jooy of using Sakura pens !</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel augue orci. Curabitur mattis aliquam justo at fringilla. Nunc volutpat orci vel sollicitudin varius. Proin ut elit non lorem varius adipiscing. Cras dignissim ullamcorper quam lacinia mattis. Vivamus a sem commodo, congue lacus eget, viverra justo. Pellentesque pulvinar, augue et dapibus tristique, lorem quam condimentum magna, a tincidunt tellus erat eu felis. Fusce euismod nisl vel vehicula sodales. Ut pretium felis in egestas condimentum. Curabitur ac hendrerit dolor, vel imperdiet turpis. Pellentesque tincidunt mi massa, quis placerat massa tristique sed. Sed porttitor mi id tortor fermentum, id auctor neque blandit. In posuere ut erat a iaculis.</p>
+				</div>
+			</ce	nter>
+			</div>
+      <!--end of posted page-->
+
+     <!--no more pages-->
+
+	</body>
+</html>
+
