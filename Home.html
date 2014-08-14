@@ -2,31 +2,18 @@
 <html>
 	<head>
 		<title>PostOutLoud</title>
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-			
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-		
-		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
-		
-		<script src="jquery-1.11.1.min.js"></script>
-		
-		<script src="backendwbuttons.js"></script>
-		
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>		
+		<script src="jquery-1.11.1.min.js"></script>		
+		<script src="backendwbuttons.js"></script>		
 		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
- 
-		
-		
-		
-		 
-			
 		<style>
 			body {
 				font-family: 'Droid Serif', serif;
 				font-size: 14px;
 				}
-		</style>
-		
+		</style>		
 		<style scoped>
 
 				.button-success,
@@ -47,16 +34,14 @@
 				
 				}
 		</style>
-        
         <style>
 			input[type=text] {padding:100 px; border:1px solid #ccc; 
 			-webkit-border-radius: 400 px;
 				border-radius: 100px;
 			}
  
-			 input[type=text]:focus {border-color:#333; }
-
- 
+			input[type=text]:focus {border-color:#333; }
+			
 			input[type=submit] {
 				border: 1px solid #f44c0e;
 				color: #fff;
@@ -67,48 +52,15 @@
 			input[type=submit]:hover {
 				background: #f44c0e;
 			}
-
 		</style>
-		
-		 
 	</head>
 	
-	
 	<body style="background-color:#F0FFF0;">
-		<!--Firebase Script-->
-		<script>
-		var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
-		  myFirebaseRef.push({
-			author: "gracehop",
-			title: "Announcing COBOL, a New Programming Language"
-		  });
-		  myFirebaseRef.push({
-			author: "alanisawesome",
-			title: "The Turing Machine"
-		  });
-		  myFirebaseRef.push({
-			display name: "sakura",
-			email address: "sakuraiscool@gmail.com",
-			post title: "Sakura",
-			post: "Says hi"
-		  });
-		  myFirebaseRef.push({
-			display name: "jennifer",
-			email address: "jennifer.lee@gmail.com",
-			post title: "Jennifer",
-			post: "Says hi"
-		  });
-		</script>
-		
-		<!-- Home Page of App -->
-		
+		<!-- Home Page of App -->		
 		<div id="HomePage">
-		 		
-            <!-- Header of App -->
-
+		 	<!-- Header of App -->
 			<div>
 				<style scoped>
-
 					.button-success,
 					.button-error {
 						color: white;
@@ -126,9 +78,7 @@
 						font-size: 150%;
 					}
 				</style>
-
-				<br></br>
-				
+				<br></br>				
 				<center>
 					<a href=""><img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"> </a> <br>
 						<a href="NewPosts.html"><button /*style="margin-left: 65%"*/ class="button-success pure-button">
@@ -137,10 +87,8 @@
 						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
 							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
 						</button>
-				</center>
-				 
-			</div>
-			 
+				</center>				 
+			</div>			 
 
 			<div>
 				<style>
@@ -171,21 +119,29 @@
 							<img src="http://s29.postimg.org/flzxuwbvr/green_note.png" height=400 width=400>
 							<img src="http://s27.postimg.org/50v8a63wz/postit_hover3.png" height=450 width=450>							
 					    </div>
-				</div> 
-					
-					
+				</div> 		
 			</div>
-		
 		</div>
         
-        <!-- End of Homepage -->
-
-		
-		 
-
-     <!--no more pages-->
-	
-		 
+    <!-- End of Homepage -->
+    <!--no more pages-->	
+	<!--Firebase Script-->
+		<script>
+				var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+		  myFirebaseRef.push({
+			author: "gracehop",
+			title: "Announcing COBOL, a New Programming Language"
+		  });
+		  myFirebaseRef.push({
+			author: "Hello World!",
+			location: {
+				city: "San Francisco",
+				state: "California",
+				zip: 94103
+			},
+			title: "Firebase"
+		  });
+		</script>
 	</body>
 </html>
 
