@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 		
 		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+		
+		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
 			
 		<style>
 			body {
@@ -90,6 +92,30 @@
 	
 	
 	<body style="background-color:#F0FFF0;">
+		<!--Firebase Script-->
+		<script>
+		var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+		  myFirebaseRef.push({
+			author: "gracehop",
+			title: "Announcing COBOL, a New Programming Language"
+		  });
+		  myFirebaseRef.push({
+			author: "alanisawesome",
+			title: "The Turing Machine"
+		  });
+		  myFirebaseRef.push({
+			display name: "sakura",
+			email address: "sakuraiscool@gmail.com",
+			post title: "Sakura",
+			post: "Says hi"
+		  });
+		  myFirebaseRef.push({
+			display name: "jennifer",
+			email address: "jennifer.lee@gmail.com",
+			post title: "Jennifer",
+			post: "Says hi"
+		  });
+		</script>
 		
 		<!-- Home Page of App -->
 		
@@ -224,8 +250,8 @@
 						 <div  style="margin-left: 25%" style="line-height:3px;">
 						  <font size="2px">
 							Your email address will be used like a password for this post;  
-							<br></br>As this post's author, only you will know what email you entered here.  
-							<br></br>If you would ever like to edit or delete your post, 
+							<br>As this post's author, only you will know what email you entered here.  
+							<br>If you would ever like to edit or delete your post, 
 							you will be asked to enter this email again to ensure that only you can make these changes.</font>
 
 						 </div>
@@ -316,7 +342,7 @@
 					background: #BCED91;
 					border-radius:25px;">
 					<h1>TITLE</h1>
-						<p>This is a wonderful post about the jooy of using Sakura pens !</p>
+						<p>This is a wonderful post about the joy of using Sakura pens !</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel augue orci. Curabitur mattis aliquam justo at fringilla. Nunc volutpat orci vel sollicitudin varius. Proin ut elit non lorem varius adipiscing. Cras dignissim ullamcorper quam lacinia mattis. Vivamus a sem commodo, congue lacus eget, viverra justo. Pellentesque pulvinar, augue et dapibus tristique, lorem quam condimentum magna, a tincidunt tellus erat eu felis. Fusce euismod nisl vel vehicula sodales. Ut pretium felis in egestas condimentum. Curabitur ac hendrerit dolor, vel imperdiet turpis. Pellentesque tincidunt mi massa, quis placerat massa tristique sed. Sed porttitor mi id tortor fermentum, id auctor neque blandit. In posuere ut erat a iaculis.</p>
 				</div>
 			</ce	nter>
