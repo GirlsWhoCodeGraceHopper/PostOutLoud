@@ -2,23 +2,12 @@
 <html>
 	<head>
 		<title>PostOutLoud</title>
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-			
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-		
 		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
-		
 		<script src="jquery-1.11.1.min.js"></script>
-		
 		<script src="backendwbuttons.js"></script>
-		
 		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
- 
-		
-		
-		
-		 
 			
 		<style>
 			body {
@@ -28,7 +17,6 @@
 		</style>
 		
 		<style scoped>
-
 				.button-success,
 				.button-error {
 					color: white;
@@ -69,43 +57,13 @@
 			}
 
 		</style>
-		
-		 
 	</head>
 	
 	
 	<body style="background-color:#F0FFF0;">
-		<!--Firebase Script-->
-		<script>
-		var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
-		  myFirebaseRef.push({
-			author: "gracehop",
-			title: "Announcing COBOL, a New Programming Language"
-		  });
-		  myFirebaseRef.push({
-			author: "alanisawesome",
-			title: "The Turing Machine"
-		  });
-		  myFirebaseRef.push({
-			display name: "sakura",
-			email address: "sakuraiscool@gmail.com",
-			post title: "Sakura",
-			post: "Says hi"
-		  });
-		  myFirebaseRef.push({
-			display name: "jennifer",
-			email address: "jennifer.lee@gmail.com",
-			post title: "Jennifer",
-			post: "Says hi"
-		  });
-		</script>
-		
-		<!-- Home Page of App -->
-		
-		<div id="HomePage">
-		 		
+		<!-- Home Page of App -->		
+		<div id="HomePage">		 		
             <!-- Header of App -->
-
 			<div>
 				<style scoped>
 
@@ -178,14 +136,34 @@
 		
 		</div>
         
-        <!-- End of Homepage -->
-
-		
+        <!-- End of Homepage -->	
 		 
-
      <!--no more pages-->
-	
-		 
+		<!--Firebase Script-->
+		<script>
+			alert("got to script");
+			var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+			  myFirebaseRef.push({
+				author: "gracehop",
+				title: "Announcing COBOL, a New Programming Language"
+			  });
+			  myFirebaseRef.push({
+				author: "alanisawesome",
+				title: "The Turing Machine"
+			  });
+			  /*myFirebaseRef.push({
+				display name: "sakura",
+				email address: "sakuraiscool@gmail.com",
+				post title: "Sakura",
+				post: "Says hi"
+			  });
+			  myFirebaseRef.push({
+				display name: "jennifer",
+				email address: "jennifer.lee@gmail.com",
+				post title: "Jennifer",
+				post: "Says hi"
+			  });*/
+		</script>	
 	</body>
 </html>
 
