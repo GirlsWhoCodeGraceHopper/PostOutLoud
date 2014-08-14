@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PostOutLoud</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+		
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+		
+		<script src="jquery-1.11.1.min.js"></script>
+		
+		<script src="backendwbuttons.js"></script>
+		
+		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
+ 
+		
+		
+		
+		 
+			
+		<style>
+			body {
+				font-family: 'Droid Serif', serif;
+				font-size: 14px;
+				}
+		</style>
+		
+		<style scoped>
+
+				.button-success,
+				.button-error {
+					color: white;
+					border-radius: 4px;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				}
+
+				.button-success {
+					background: rgb(28, 184, 65); /* this is a green */
+					font-size: 150%;
+				}
+
+				.button-error {
+					background: rgb(202, 60, 60); /* this is a maroon */
+					font-size: 150%;
+				
+				}
+		</style>
+        
+        <style>
+			input[type=text] {padding:100 px; border:1px solid #ccc; 
+			-webkit-border-radius: 400 px;
+				border-radius: 100px;
+			}
+ 
+			 input[type=text]:focus {border-color:#333; }
+
+ 
+			input[type=submit] {
+				border: 1px solid #f44c0e;
+				color: #fff;
+				background: tomato;
+				padding: 20px 50px;
+				border-radius: 15px;
+			}
+			input[type=submit]:hover {
+				background: #f44c0e;
+			}
+
+		</style>
+		
+		 
+	</head>
+	
+	
+	<body style="background-color:#F0FFF0;">
+		<!--Firebase Script-->
+		<script>
+		var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+		  myFirebaseRef.push({
+			author: "gracehop",
+			title: "Announcing COBOL, a New Programming Language"
+		  });
+		  myFirebaseRef.push({
+			author: "alanisawesome",
+			title: "The Turing Machine"
+		  });
+		  myFirebaseRef.push({
+			display name: "sakura",
+			email address: "sakuraiscool@gmail.com",
+			post title: "Sakura",
+			post: "Says hi"
+		  });
+		  myFirebaseRef.push({
+			display name: "jennifer",
+			email address: "jennifer.lee@gmail.com",
+			post title: "Jennifer",
+			post: "Says hi"
+		  });
+		</script>
+		
+		<!-- Home Page of App -->
+		
+		<div id="HomePage">
+		 		
+            <!-- Header of App -->
+
+			<div>
+				<style scoped>
+
+					.button-success,
+					.button-error {
+						color: white;
+						border-radius: 4px;
+						text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+					}
+
+					.button-success {
+						background: rgb(69, 139, 0); /* this is a green */
+						font-size: 150%;
+					}
+
+					.button-error {
+						background: rgb(69, 139, 0); /* this is a maroon */
+						font-size: 150%;
+					}
+				</style>
+
+				<br></br>
+				
+				<center>
+					<img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"><br>
+						<button /*style="margin-left: 65%"*/ class="button-success pure-button">
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button>
+						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+				</center>
+				 
+			</div>
+			 
+
+			<div>
+				<style>
+					.container{
+					height:1000px;
+					width:100%;
+					text-align:center;
+					}
+					.container div{
+					display: inline-block;
+					vertical-align: middle;
+					} 
+					 .column-left{ float: left; width: 33%;  height:1000px;}
+					.column-right{ float: right; width: 33%;  height:1000px; border-right: 2px dotted #ccc;}
+					.column-center{ display: inline-block; width: 33%; height:1000px;}
+				</style>
+
+				<div class="container">
+					    <div class="column-left">
+							<img src="http://s3.postimg.org/4pg6r2nhf/jix_ELEqd_T.png" height=500 width=500>
+							<img src="http://s29.postimg.org/flzxuwbvr/green_note.png" height=400 width=400>
+					    </div>
+					    <div class="column-center">
+							<img src="http://s27.postimg.org/50v8a63wz/postit_hover3.png" height=450 width=450>
+							<img src="http://s3.postimg.org/4pg6r2nhf/jix_ELEqd_T.png" height=500 width=500>							
+					    </div>
+					    <div class="column-right">
+							<img src="http://s29.postimg.org/flzxuwbvr/green_note.png" height=400 width=400>
+							<img src="http://s27.postimg.org/50v8a63wz/postit_hover3.png" height=450 width=450>							
+					    </div>
+				</div> 
+					
+					
+			</div>
+		
+		</div>
+        
+        <!-- End of Homepage -->
+
+		
+		 
+
+     <!--no more pages-->
+	
+		 
+	</body>
+</html>
+

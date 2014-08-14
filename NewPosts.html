@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PostOutLoud</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+		
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>
+		
+		<script src="jquery-1.11.1.min.js"></script>
+		
+		<script src="backendwbuttons.js"></script>
+		
+		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
+ 
+		
+		
+		
+		 
+			
+		<style>
+			body {
+				font-family: 'Droid Serif', serif;
+				font-size: 14px;
+				}
+		</style>
+		
+		<style scoped>
+
+				.button-success,
+				.button-error {
+					color: white;
+					border-radius: 4px;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				}
+
+				.button-success {
+					background: rgb(28, 184, 65); /* this is a green */
+					font-size: 150%;
+				}
+
+				.button-error {
+					background: rgb(202, 60, 60); /* this is a maroon */
+					font-size: 150%;
+				
+				}
+		</style>
+        
+        <style>
+			input[type=text] {padding:100 px; border:1px solid #ccc; 
+			-webkit-border-radius: 400 px;
+				border-radius: 100px;
+			}
+ 
+			 input[type=text]:focus {border-color:#333; }
+
+ 
+			input[type=submit] {
+				border: 1px solid #f44c0e;
+				color: #fff;
+				background: tomato;
+				padding: 20px 50px;
+				border-radius: 15px;
+			}
+			input[type=submit]:hover {
+				background: #f44c0e;
+			}
+
+		</style>
+		
+		 
+	</head>
+	
+	
+	<body style="background-color:#F0FFF0;">
+		<!--Firebase Script-->
+		<script>
+		var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+		  myFirebaseRef.push({
+			author: "gracehop",
+			title: "Announcing COBOL, a New Programming Language"
+		  });
+		  myFirebaseRef.push({
+			author: "alanisawesome",
+			title: "The Turing Machine"
+		  });
+		  myFirebaseRef.push({
+			display name: "sakura",
+			email address: "sakuraiscool@gmail.com",
+			post title: "Sakura",
+			post: "Says hi"
+		  });
+		  myFirebaseRef.push({
+			display name: "jennifer",
+			email address: "jennifer.lee@gmail.com",
+			post title: "Jennifer",
+			post: "Says hi"
+		  });
+		</script>
+		 
+		
+		<!-- New Posts Page of App -->
+
+		<div id="NewPostsPage">
+		
+            <!-- Header of App -->
+  
+			<div>
+ 
+				<br></br>
+				
+				<center>
+					<img src="http://s28.postimg.org/8w831dznh/FINALEVER.png"><br>
+						<button /*style="margin-left: 65%"*/ class="button-success pure-button" >
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button>
+						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+				</center>
+				 
+			</div>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+
+			<div data-role = "content">
+            
+            <!-- Form to Submit -->
+
+				 <form class="pure-form pure-form-aligned">
+					
+						<div style="margin-left: 10%" class="pure-control-group">
+							<label for="name">Display Name</label>
+							<input type="text"  placeholder="Display Name">
+						</div>
+						
+						<div style="margin-left: 25%">
+							<font size="2px"> Choose a Display Name that you'd like to post under! Your display name will be public. </font>
+						</div>
+						
+						<br><br><br><br>
+						
+                        <div  style="margin-left: 10%" class="pure-control-group">
+							<label for="email">Email Address</label>
+							<input id="email" type="email"  placeholder="you@email.com">
+						</div>
+						
+						<div  style="margin-left: 25%" style="line-height:3px;">
+						  <font size="2px">
+							Your email address will be used like a password for this post;  
+							<br></br>As this post's author, only you will know what email you entered here.  
+							<br></br>If you would ever like to edit or delete your post, 
+							you will be asked to enter this email again to ensure that only you can make these changes.</font>
+
+						 </div>
+						 
+						 <div style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group"> <br><br><br><br>
+							<label for="title">Post Title</label>
+							<input id="title" type="text" placeholder="Your Post's Title">
+						</div>
+						  
+                          <br><br><br> 
+						  
+						 <div  style="margin-left: 10%" style="margin-left: 10%" class="pure-control-group">
+						  <label  for="post" >Your Post</label>
+							<textarea id="post" type="text" value="" style="margin-left: 0px" rows="7" cols="70">  
+							</textarea>
+						 </div>
+						  
+
+						<div style="margin-left:25%" class="pure-controls">
+							<label for="cb" class="pure-checkbox">
+								<input id="cb" type="checkbox"> I've read the terms and conditions
+							</label>
+							
+								<br><br><br><br>
+                        </div>
+                        
+						<div>
+						 	<!--input type="submit" id="enter" value="Submit!"-->
+							<a href="#HomePage" style="text-decoration:none">
+							<input type="button" value="Submit" id="enter">
+							</a>
+								<br><br><br><br><br><br><br><br><br><br>
+						
+						 </div>
+						
+				</form>				
+			 
+ 			</div>
+		</div>
+		          <!-- Bottom of Form and Page -->
+
+	  
+
+     <!--no more pages-->
+	
+		 
+	</body>
+</html>
+
