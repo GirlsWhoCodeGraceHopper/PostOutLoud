@@ -33,13 +33,25 @@ $(document).ready(function(){
 		$("#email").val("");
 		$("#title").val("");
 		$("#post").val("");
-		window.location.replace("Home.html");
+		//window.location.replace("Home.html");
 		}
 		
-		myFirebaseRef.on('child_added', function(snapshot) {
-			var message = snapshot.val();
-				displayChatMessage(message.name, message.text);
+		
+		dataSnapshot.forEach(function(childSnapshot) {
+		  // This code will be called twice.
+		  var name = childSnapshot.name();
+		  alert(name);
+		  var childData = childSnapshot.val();
+		  alert(childData);
+		  // name will be 'fred' the first time and 'wilma' the second time.
+		  // childData will be the actual contents of the child.
 		});
+		
+		
+		/*var usersRef = new Firebase('https://samplechat.firebaseio-demo.com/users');
+		var fredRef = usersRef.child('fred');
+		var fredFirstNameRef = fredRef.child('name/first');
+		var path = fredFirstNameRef.toString(); */
 
 	});
 });
