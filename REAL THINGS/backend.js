@@ -22,29 +22,34 @@ $(document).ready(function(){
 		}
 		
 		else {
-		myFirebaseRef.push({
-			"Title":""+title,
-			"Name":""+name,
-			"Email":""+email,
-			"Post":""+post,
-			});
-			alert("Submitted!")
-		$("#displayname").val("");
-		$("#email").val("");
-		$("#title").val("");
-		$("#post").val("");
-		//window.location.replace("Home.html");
+			myFirebaseRef.push({
+				"Title":""+title,
+				"Name":""+name,
+				"Email":""+email,
+				"Post":""+post,
+				});
+				alert("Submitted!")
+			$("#displayname").val("");
+			$("#email").val("");
+			$("#title").val("");
+			$("#post").val("");
+			//window.location.replace("Home.html");
 		}
 		
-		
-		dataSnapshot.forEach(function(childSnapshot) {
-		  // This code will be called twice.
-		  var name = childSnapshot.name();
-		  alert(name);
-		  var childData = childSnapshot.val();
-		  alert(childData);
-		  // name will be 'fred' the first time and 'wilma' the second time.
-		  // childData will be the actual contents of the child.
+		myFirebaseRef.once('value', function(dataSnapshot) {
+			dataSnapshot.forEach(function(messageSnapshot) {
+			// Will be called with a messageSnapshot for each message under message_list.
+			var title = messageSnapshot.child('Title').val();
+			var name = messageSnapshot.child('Name').val();
+			var email = messageSnapshot.child('Email').val();
+			var post = messageSnapshot.child('Post').val();
+
+			alert(title);
+			alert(name);
+			alert(email);
+			alert(post);
+			// Do something with message.
+			});
 		});
 		
 		
