@@ -138,6 +138,15 @@
         <!-- End of Homepage -->
 	 
      <!--no more pages-->		 
+	 <!--Firebase-->
+		<script>
+			var numPosts=0;
+			var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+			myFirebaseRef.once('value', function(dataSnapshot) {
+			dataSnapshot.forEach(function(messageSnapshot) {
+				numPosts=numPosts+1;
+			}
+		</script>
 	</body>
 </html>
 
