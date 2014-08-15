@@ -23,10 +23,10 @@ $(document).ready(function(){
 		
 		else {
 		myFirebaseRef.push({
-			"Post Title":""+title,
-			"Display Name":""+name,
+			"Title":""+title,
+			"Name":""+name,
 			"Email":""+email,
-			"Post Content":""+post,
+			"Post":""+post,
 			});
 			alert("Submitted!")
 		$("#displayname").val("");
@@ -34,9 +34,13 @@ $(document).ready(function(){
 		$("#title").val("");
 		$("#post").val("");
 		window.location.replace("Home.html");
-			
-			
 		}
+		
+		myFirebaseRef.on('child_added', function(snapshot) {
+			var message = snapshot.val();
+				displayChatMessage(message.name, message.text);
+		});
+
 	});
 });
 
