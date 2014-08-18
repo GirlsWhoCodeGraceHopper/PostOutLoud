@@ -33,7 +33,7 @@ $(document).ready(function(){
 			$("#email").val("");
 			$("#title").val("");
 			$("#post").val("");
-			//window.location.replace("Home.html");
+			window.location.replace("Home.html");
 		}
 		
 		myFirebaseRef.once('value', function(dataSnapshot) {
