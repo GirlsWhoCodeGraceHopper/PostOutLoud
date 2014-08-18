@@ -1,4 +1,4 @@
-     
+  
 var newPostList;
 $(document).ready(function(){
 	  $("#enter").click(function(){  
@@ -37,96 +37,7 @@ $(document).ready(function(){
 				window.location = "home.html";
 			});
 		 
-		}
-		
-		var postNum=0;
-		myFirebaseRef.once('value', function(dataSnapshot) {
-			dataSnapshot.forEach(function(messageSnapshot) {
-			postNum=postNum+1;
-			console.log(postNum)
-			
-			if (postNum===1){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#1").val(title, name, post);
-				$("#name1").val(name);
-				$("#post1").val(post);
-		
-			}
-			if (postNum===2){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title2").val(title);
-				$("#name2").val(name);
-				$("#post2").val(post);
-			
-			}
-			if (postNum===3){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title3").val(title);
-				$("#name3").val(name);
-				$("#post3").val(post);
-			
-			}
-			if (postNum===4){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title4").val(title);
-				$("#name4").val(name);
-				$("#post4").val(post);
-			}
-			if (postNum===5){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title5").val(title);
-				$("#name5").val(name);
-				$("#post5").val(post);
-			}
-			if (postNum===6){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title6").val(title);
-				$("#name6").val(name);
-				$("#post6").val(post);
-			}
-			if (postNum===7){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title7").val(title);
-				$("#name7").val(name);
-				$("#post7").val(post);
-			}
-			if (postNum===8){
-				var title = messageSnapshot.child('Title').val();
-				var name = messageSnapshot.child('Name').val();
-				var email = messageSnapshot.child('Email').val();
-				var post = messageSnapshot.child('Post').val();
-				$("#title8").val(title);
-				$("#name8").val(name);
-				$("#post8").val(post);
-			}
-			
-		 
-			
-			});
-		}); 
-		
-		
+		}			
 		/*var usersRef = new Firebase('https://samplechat.firebaseio-demo.com/users');
 		var fredRef = usersRef.child('fred');
 		var fredFirstNameRef = fredRef.child('name/first');
@@ -137,10 +48,99 @@ $(document).ready(function(){
 
 //jQuery and JavaScript goes here
 
-	 
+//jQuery and JavaScript goes here
+
+function showPosts(){ 
  
-	
-	
+	var postNum=0;
+	var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+	myFirebaseRef.once('value', function(dataSnapshot) {
+		dataSnapshot.forEach(function(messageSnapshot) {
+			postNum=postNum+1;
+			console.log(postNum);
+			if (postNum===1){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				alert("we got to 1"); 
+				document.getElementById("title1").innerHTML = title;
+				document.getElementById("name1").innerHTML = name;
+				document.getElementById("post1").innerHTML = post;
+			}
+			if (postNum===2){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				alert("we got to 2");  
+				document.getElementById("title2").innerHTML = title;
+ 				document.getElementById("name2").innerHTML = name;
+				document.getElementById("post2").innerHTML = post;
+			
+			}
+			if (postNum===3){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				alert("we got to 3"); 
+				document.getElementById("title3").innerHTML = title;
+ 				document.getElementById("name3").innerHTML = name;
+				document.getElementById("post3").innerHTML = post;				
+			
+			}
+			if (postNum===4){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				document.getElementById("title4").innerHTML = title;
+ 				document.getElementById("name4").innerHTML = name;
+				document.getElementById("post4").innerHTML = post;			 
+			}
+			if (postNum===5){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				document.getElementById("title5").innerHTML = title;
+ 				document.getElementById("name5").innerHTML = name;
+				document.getElementById("post5").innerHTML = post;				 
+			}
+			if (postNum===6){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				document.getElementById("title6").innerHTML = title;
+ 				document.getElementById("name6").innerHTML = name;
+				document.getElementById("post6").innerHTML = post;			 
+			}
+			if (postNum===7){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				document.getElementById("title7").innerHTML = title;
+ 				document.getElementById("name7").innerHTML = name;
+				document.getElementById("post7").innerHTML = post;			 
+			}
+			if (postNum===8){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				document.getElementById("title8").innerHTML = title;
+ 				document.getElementById("name8").innerHTML = name;
+				document.getElementById("post8").innerHTML = post;				 
+			}
+			 
+		});
+		alert("done showing posts i guess");
+	}); 
+}
+ 
 function Post(creator, content, date) {
 	console.log("new Post");
 	this.creator = creator;
