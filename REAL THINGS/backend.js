@@ -19,9 +19,7 @@ $(document).ready(function(){
 		
 		if ( name=== "" || email=== "" || title=== ""|| post=== ""|| check=== 0) {
 			alert("You missed something...");
-		}
-		
-		else {
+		} else {
 			myFirebaseRef.push({
 				"Title":""+title,
 				"Name":""+name,
@@ -33,10 +31,14 @@ $(document).ready(function(){
 			$("#email").val("");
 			$("#title").val("");
 			$("#post").val("");
-			window.location.replace("Home.html");
+			//window.location.replace("home.html")
+			//window.location.href = "home.html";
+			//var url = "home.html";    
+			//$(location).attr('href',url);
+			window.location = "home.html";
 		}
 		
-		myFirebaseRef.once('value', function(dataSnapshot) {
+		/* myFirebaseRef.once('value', function(dataSnapshot) {
 			dataSnapshot.forEach(function(messageSnapshot) {
 			// Will be called with a messageSnapshot for each message under message_list.
 			var title = messageSnapshot.child('Title').val();
@@ -45,7 +47,7 @@ $(document).ready(function(){
 			var post = messageSnapshot.child('Post').val();
 			// Do something with message.
 			});
-		});
+		}); */
 		
 		
 		/*var usersRef = new Firebase('https://samplechat.firebaseio-demo.com/users');
