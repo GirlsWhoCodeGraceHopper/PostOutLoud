@@ -39,7 +39,7 @@ $(document).ready(function(){
 		 
 		}
 		
-		/* myFirebaseRef.once('value', function(dataSnapshot) {
+		myFirebaseRef.once('value', function(dataSnapshot) {
 			dataSnapshot.forEach(function(messageSnapshot) {
 			// Will be called with a messageSnapshot for each message under message_list.
 			var title = messageSnapshot.child('Title').val();
@@ -47,8 +47,12 @@ $(document).ready(function(){
 			var email = messageSnapshot.child('Email').val();
 			var post = messageSnapshot.child('Post').val();
 			// Do something with message.
+			
+
+			//$("#htmldivtofill").val(thingstofillwith);
+			
 			});
-		}); */
+		}); 
 		
 		
 		/*var usersRef = new Firebase('https://samplechat.firebaseio-demo.com/users');
