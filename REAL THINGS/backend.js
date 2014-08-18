@@ -39,15 +39,95 @@ $(document).ready(function(){
 		 
 		}
 		
+		var postNum=0;
 		myFirebaseRef.once('value', function(dataSnapshot) {
 			dataSnapshot.forEach(function(messageSnapshot) {
+			postNum=postNum+1;
+			
+			if (postNum==1){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title1").val(title);
+				$("#name1").val(name);
+				$("#post1").val(post);
+		
+			}
+			if (postNum==2){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title2").val(title);
+				$("#name2").val(name);
+				$("#post2").val(post);
+			
+			}
+			if (postNum==3){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title3").val(title);
+				$("#name3").val(name);
+				$("#post3").val(post);
+			
+			}
+			if (postNum==4){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title4").val(title);
+				$("#name4").val(name);
+				$("#post4").val(post);
+			}
+			if (postNum==5){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title5").val(title);
+				$("#name5").val(name);
+				$("#post5").val(post);
+			}
+			if (postNum==6){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title6").val(title);
+				$("#name6").val(name);
+				$("#post6").val(post);
+			}
+			if (postNum==7){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title7").val(title);
+				$("#name7").val(name);
+				$("#post7").val(post);
+			}
+			if (postNum==8){
+				var title = messageSnapshot.child('Title').val();
+				var name = messageSnapshot.child('Name').val();
+				var email = messageSnapshot.child('Email').val();
+				var post = messageSnapshot.child('Post').val();
+				$("#title8").val(title);
+				$("#name8").val(name);
+				$("#post8").val(post);
+			}
+			
+			/*
 			// Will be called with a messageSnapshot for each message under message_list.
 			var title = messageSnapshot.child('Title').val();
 			var name = messageSnapshot.child('Name').val();
 			var email = messageSnapshot.child('Email').val();
 			var post = messageSnapshot.child('Post').val();
 			// Do something with message.
-			
+			*/
 
 			//$("#htmldivtofill").val(thingstofillwith);
 			
