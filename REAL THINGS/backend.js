@@ -56,14 +56,13 @@ function showPosts(){
 	var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
 	myFirebaseRef.once('value', function(dataSnapshot) {
 		dataSnapshot.forEach(function(messageSnapshot) {
-			postNum=postNum+1;
-			console.log(postNum);
+			postNum=postNum+1; 
 			if (postNum===1){
 				var title = messageSnapshot.child('Title').val();
 				var name = messageSnapshot.child('Name').val();
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
-				alert("we got to 1"); 
+ 
 				document.getElementById("title1").innerHTML = title;
 				document.getElementById("name1").innerHTML = name;
 				document.getElementById("post1").innerHTML = post;
@@ -73,8 +72,7 @@ function showPosts(){
 				var name = messageSnapshot.child('Name').val();
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
-				alert("we got to 2");  
-				document.getElementById("title2").innerHTML = title;
+ 				document.getElementById("title2").innerHTML = title;
  				document.getElementById("name2").innerHTML = name;
 				document.getElementById("post2").innerHTML = post;
 			
@@ -84,8 +82,7 @@ function showPosts(){
 				var name = messageSnapshot.child('Name').val();
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
-				alert("we got to 3"); 
-				document.getElementById("title3").innerHTML = title;
+ 				document.getElementById("title3").innerHTML = title;
  				document.getElementById("name3").innerHTML = name;
 				document.getElementById("post3").innerHTML = post;				
 			
@@ -137,8 +134,7 @@ function showPosts(){
 			}
 			 
 		});
-		alert("done showing posts i guess");
-	}); 
+ 	}); 
 }
  
 function Post(creator, content, date) {
