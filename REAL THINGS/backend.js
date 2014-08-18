@@ -64,7 +64,7 @@ function showPosts(){
 				var post = messageSnapshot.child('Post').val();
  
 				document.getElementById("title1").innerHTML = title;
-				document.getElementById("name1").innerHTML = name;
+				document.getElementById("name1").innerHTML = "Posted by " + name;
 				document.getElementById("post1").innerHTML = post;
 			}
 			if (postNum===2){
@@ -73,7 +73,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
  				document.getElementById("title2").innerHTML = title;
- 				document.getElementById("name2").innerHTML = name;
+ 				document.getElementById("name2").innerHTML = "Posted by " + name;
 				document.getElementById("post2").innerHTML = post;
 			
 			}
@@ -83,7 +83,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
  				document.getElementById("title3").innerHTML = title;
- 				document.getElementById("name3").innerHTML = name;
+ 				document.getElementById("name3").innerHTML = "Posted by " + name;
 				document.getElementById("post3").innerHTML = post;				
 			
 			}
@@ -93,7 +93,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
 				document.getElementById("title4").innerHTML = title;
- 				document.getElementById("name4").innerHTML = name;
+ 				document.getElementById("name4").innerHTML = "Posted by " + name;
 				document.getElementById("post4").innerHTML = post;			 
 			}
 			if (postNum===5){
@@ -102,7 +102,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
 				document.getElementById("title5").innerHTML = title;
- 				document.getElementById("name5").innerHTML = name;
+ 				document.getElementById("name5").innerHTML = "Posted by " + name;
 				document.getElementById("post5").innerHTML = post;				 
 			}
 			if (postNum===6){
@@ -111,7 +111,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
 				document.getElementById("title6").innerHTML = title;
- 				document.getElementById("name6").innerHTML = name;
+ 				document.getElementById("name6").innerHTML =  "Posted by " + name;
 				document.getElementById("post6").innerHTML = post;			 
 			}
 			if (postNum===7){
@@ -120,7 +120,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
 				document.getElementById("title7").innerHTML = title;
- 				document.getElementById("name7").innerHTML = name;
+ 				document.getElementById("name7").innerHTML ="Posted by " + name;
 				document.getElementById("post7").innerHTML = post;			 
 			}
 			if (postNum===8){
@@ -129,7 +129,7 @@ function showPosts(){
 				var email = messageSnapshot.child('Email').val();
 				var post = messageSnapshot.child('Post').val();
 				document.getElementById("title8").innerHTML = title;
- 				document.getElementById("name8").innerHTML = name;
+ 				document.getElementById("name8").innerHTML = "Posted by " + name;
 				document.getElementById("post8").innerHTML = post;				 
 			}
 			 
