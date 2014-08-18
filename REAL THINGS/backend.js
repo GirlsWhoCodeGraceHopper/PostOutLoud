@@ -28,7 +28,7 @@ $(document).ready(function(){
 				"Email":""+email,
 				"Post":""+post,
 				});
-				alert("Submitted!")
+				alert("Submitted!");
 			$("#displayname").val("");
 			$("#email").val("");
 			$("#title").val("");
