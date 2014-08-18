@@ -26,20 +26,17 @@ $(document).ready(function(){
 				"Email":""+email,
 				"Post":""+post,
 				});
+				
+			alert("Submitted!");
 		
 			myFirebaseRef.on('child_added', function(childSnapshot, prevChildName) {
-				alert("Submitted!");
 				$("#displayname").val("");
 				$("#email").val("");
 				$("#title").val("");
 				$("#post").val("");
 				window.location = "home.html";
 			});
-			//window.location.replace("home.html")
-			//window.location.href = "home.html";
-			//var url = "home.html";    
-			//$(location).attr('href',url);
-			//window.location = "home.html";
+		 
 		}
 		
 		/* myFirebaseRef.once('value', function(dataSnapshot) {
