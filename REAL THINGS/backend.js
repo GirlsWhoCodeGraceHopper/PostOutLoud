@@ -43,11 +43,7 @@ $(document).ready(function(){
 			var name = messageSnapshot.child('Name').val();
 			var email = messageSnapshot.child('Email').val();
 			var post = messageSnapshot.child('Post').val();
-
-			alert(title);
-			alert(name);
-			alert(email);
-			alert(post);
+ 
 			// Do something with message.
 			});
 		});
