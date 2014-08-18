@@ -18,7 +18,7 @@ $(document).ready(function(){
 		var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
 		
 		if ( name=== "" || email=== "" || title=== ""|| post=== ""|| check=== 0) {
-			alert("You missed something...")
+			alert("You missed something...");
 		}
 		
 		else {
