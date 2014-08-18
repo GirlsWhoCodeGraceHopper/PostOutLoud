@@ -8,7 +8,7 @@ $(document).ready(function(){
 		var post= $("#post").val(); 
  
  
-		 if (document.getElementById('cb').checked) {
+		if (document.getElementById('cb').checked) {
             var check= 1;
         } else {
             var check= 0;
@@ -43,7 +43,6 @@ $(document).ready(function(){
 			var name = messageSnapshot.child('Name').val();
 			var email = messageSnapshot.child('Email').val();
 			var post = messageSnapshot.child('Post').val();
- 
 			// Do something with message.
 			});
 		});
