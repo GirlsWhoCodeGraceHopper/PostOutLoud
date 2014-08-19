@@ -1,23 +1,103 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PostOutLoud</title>		
-		<meta name="viewport" content="width=device-width, initial-scale=1">			
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
-		<link rel="stylesheet" type="text/css"   href='http://fonts.googleapis.com/css?family=Open+Sans'>
+		<title>PostOutLoud</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 		 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic|Oswald:700,400' rel='stylesheet' type='text/css'>		<script src="js/bootstrap.min.js"></script>		
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+		<script src="backend.js"></script>	
 		<script src="jquery.js"></script>		
-		<script src="backend.js"></script>		
+	
+            
+
 		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
 		<style>
 			 body {
-				font-family: 'Open Sans';
+				font-family: 'Arimo';
 				font-size: 14px;
+				color: #3D3d3d;
 				}  
-		</style>		
+		</style>
+		
+		
+	 
+		<style>
+            div { 
+            }
+
+            div.ex {
+                margin-top: 10px;
+                margin-bottom: 0x;
+                margin-right:  360px;
+                margin-left: 380px;
+            }
+            </style>		
 		
 		<style type="text/css"> 
 			.pic{ width:430px; height:100px; opacity: 1; filter: alpha(opacity=100) no-repeat; } 
 			.pic:hover { opacity: 0.7; filter: alpha(opacity=70); } </style>  
+		
+		<style>
+		 ul {
+          text-align: left;
+          display: 2000px;
+          padding: 25px 4px 20px 0;
+          list-style: none;
+          -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+          font:  15px/20px Arimo;
+          display: inline-block;
+          margin-left: 20px;
+
+          position: relative;
+          padding: 15px 30px;
+          background: #fff;
+          cursor: pointer;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          -ms-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s;
+        }
+        ul li:hover {
+          background: #555;
+          color: #fff;
+        }
+        ul li ul {
+          padding: 0;
+          position: absolute;
+          top: 48px;
+          left: 0;
+          width: 180px;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          -webkit-transiton: opacity 0.2s;
+          -moz-transition: opacity 0.2s;
+          -ms-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          -transition: opacity 0.2s;
+        }
+        ul li ul li { 
+          background: #555; 
+          display: block; 
+          color: #fff;
+          text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+        </style>
 		
 		<style>
 			input[type=text] {padding:100 px; border:1px solid #ccc; 
@@ -57,38 +137,69 @@
 				</style>	
 	</head>
 	
-	<body onload="showPosts()" background="http://s30.postimg.org/nzsqkp8ap/image.png">
+	<body onload="showPosts()" background="http://s15.postimg.org/nm34h6xij/Star_Burst_Galaxies_1.jpg">
 		<!-- Home Page of App -->		
 		<div id="HomePage">		 		
             <!-- Header of App -->
+	                <ul><li>Home</li>
+     <li>FAQ</li>
+  <li>New Post</li>
+  <li>
+    Track Popular Tags
+    <ul>
+        <li>PoliceBrutality </li>
+      <li>LGBTQ </li>
+      <li>#YesAllWomen</li>
+      <li>Sexism</li>
+      <li>EverydayRacism</li>
+      <li>Classism</li>
+      
+</ul>
+  </li>
+     <li>Contact</li>
+  <li>
+    Archives (by Month)
+    <ul>
+      <li>August 2014 </li> 
+      
+</ul>
+  </li>
+  <li>Search Site and Post Archives</li>
+</ul>
+			
 			<div>
-				<style scoped>
-					.button-success,
-					.button-error {
-						color: white;
-						border-radius: 4px;
-						text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-					}
-					.button-success {
-					background: rgb(241,0,203);  
-					font-size: 150%;
-				    }
-				    .button-error {
-					background: rgb(255,63,225);  
-					font-size: 150%;
-					}
-				</style>
-				<br></br>				
-				<center>
-					<a href=""><img class="pic" id=".pic" src="http://s17.postimg.org/urnxtl7i7/Screen_Shot_back_08_13_at_11_53_54_PM.jpg"> </a> <br>
-						<a href="NewPosts.html"><button /*style="margin-left: 65%"*/ class="button-success pure-button">
+				 
+				<br> 			
+				   
+					 	 
+					 
+						
+						<!--<a href="NewPosts.html"><button /*style="margin-left: 65%"*/ class="button-success pure-button">
 							<font style="font-family:Arial;font-weight: bold" >New Post</font>
 						</button></a>
+						
+						
 						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
 							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
 						</button>
-				</center>				 
+				  -->				 
 			</div>
+			
+			
+		  <div class="ex">  
+ 		                        <a href="PostedPage.html">
+								 <font face="Oswald" size="10"  ><b>  <center>Action / Inaction </b></font>
+								 </a>
+							    <br>
+						        <font size="3"  > Posted by astreaa2 </font> </center>
+							     							    <br>
+						        <font   size="4" > The flaw in the (conventional) principle  of marriage lies in its definition as a recognized union between one man and one woman. The definition which is non-biased (and which we should adopt) would call marriage a union between a consenting adult and another consenting adult. </font>
+		  </div>
+
+			
+			
+			
+			
 			<div>
 				<style>
 					.container{
