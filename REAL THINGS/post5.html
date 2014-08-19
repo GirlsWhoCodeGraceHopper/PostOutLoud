@@ -5,10 +5,73 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">			
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
 		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>		
-		<script src="jquery-1.11.1.min.js"></script>		
-		<script src="backendwbuttons.js"></script>		
+		<script src="jquery.js"></script>		
+		<script src="backend.js"></script>
 		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
-	
+	    <style>
+		 ul {
+          text-align: center;
+                    position: relative;
+ 
+          display: 20000px;
+          padding: 10px 0px 20px ; 
+
+          list-style: none;
+          -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+          font:  14px/15px Arimo;
+          display: inline-block;
+             margin-left:   0px;
+
+          position: relative;
+          padding: 15px 10px;
+          background: #fff;
+          cursor: pointer;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          -ms-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s;
+        }
+        ul li:hover {
+          background: #555;
+          color: #fff;
+        }
+        ul li ul {
+          padding: 0;
+          position: absolute;
+          top: 0 px;
+          left: 0;
+ 
+          width: 140px;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          -webkit-transiton: opacity 0.2s;
+          -moz-transition: opacity 0.2s;
+          -ms-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          -transition: opacity 0.2s;
+        }
+        ul li ul li { 
+          background: #555; 
+          display: block; 
+          color: #fff;
+          text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+        </style>
 		<style>
 			body {
 				font-family: 'MS Sans Serif';
@@ -56,8 +119,7 @@
 			}
 		</style>		 
 	</head>
-	<body style="background-color:#F0FFF0;">
-		<!--Firebase Script-->	 
+	<body style="background-color:#F0FFF0;"> 
 	    <!--posted page-->     
         <div id="PostedPage"> 		
         <!-- Header of App -->
@@ -103,9 +165,8 @@
 					padding:10px 40px; 
 					background: #BCED91;
 					border-radius:25px;">
-					<h1>TITLE</h1>
-						<p>This is a wonderful post about the jooy of using Sakura pens !</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel augue orci. Curabitur mattis aliquam justo at fringilla. Nunc volutpat orci vel sollicitudin varius. Proin ut elit non lorem varius adipiscing. Cras dignissim ullamcorper quam lacinia mattis. Vivamus a sem commodo, congue lacus eget, viverra justo. Pellentesque pulvinar, augue et dapibus tristique, lorem quam condimentum magna, a tincidunt tellus erat eu felis. Fusce euismod nisl vel vehicula sodales. Ut pretium felis in egestas condimentum. Curabitur ac hendrerit dolor, vel imperdiet turpis. Pellentesque tincidunt mi massa, quis placerat massa tristique sed. Sed porttitor mi id tortor fermentum, id auctor neque blandit. In posuere ut erat a iaculis.</p>
+					<div id="title1">Title</div>
+						
 				</div>
 			</center>
 			</div>

@@ -4,18 +4,83 @@
 		<title>PostOutLoud</title>		
 		<meta name="viewport" content="width=device-width, initial-scale=1">			
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
-		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>		
+        <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic|Oswald:700,400' rel='stylesheet' type='text/css'>		<script src="js/bootstrap.min.js"></script>		
 		<script src="jquery.js"></script>		
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>		
 		<script src="backend.js"></script>		
 		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
  
-			
 		<style>
-			body {
-				font-family: 'MS Sans Serif';
+		 ul {
+          text-align: center;
+                    position: relative;
+ 
+          display: 20000px;
+          padding: 10px 0px 20px ; 
+
+          list-style: none;
+          -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+        ul li {
+          font:  14px/15px Arimo;
+          display: inline-block;
+             margin-left:   0px;
+
+          position: relative;
+          padding: 15px 10px;
+          background: #fff;
+          cursor: pointer;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          -ms-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s;
+        }
+        ul li:hover {
+          background: #555;
+          color: #fff;
+        }
+        ul li ul {
+          padding: 0;
+          position: absolute;
+          top: 0 px;
+          left: 0;
+ 
+          width: 140px;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          -webkit-transiton: opacity 0.2s;
+          -moz-transition: opacity 0.2s;
+          -ms-transition: opacity 0.2s;
+          -o-transition: opacity 0.2s;
+          -transition: opacity 0.2s;
+        }
+        ul li ul li { 
+          background: #555; 
+          display: block; 
+          color: #fff;
+          text-shadow: 0 -1px 0 #000;
+        }
+        ul li ul li:hover { background: #666; }
+        ul li:hover ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+        </style>
+        
+			<style>
+			 body {
+				font-family: 'Arimo';
 				font-size: 14px;
-				}
+				color: #3D3d3d;
+				}  
 		</style>
 		
 		<style scoped>
@@ -76,23 +141,35 @@
 
 		<div id="NewPostsPage">
 		
-            <!-- Header of App -->
-  
-			<div>
- 
-				<br></br>
-				
-				<center>
-					<a href="Home.html"><img class="pic" id=".pic" src="http://s17.postimg.org/urnxtl7i7/Screen_Shot_back_08_13_at_11_53_54_PM.jpg"></a><br>
-						<a href=""><button /*style="margin-left: 65%"*/ class="button-success pure-button" >
-							<font style="font-family:Arial;font-weight: bold" >New Post</font>
-						</button></a>
-						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
-							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
-						</button>
-				</center>
-				 
-			</div>
+           <!-- Header of App -->
+                 <ul style="margin: 0px 0px">
+                                  <li><a href="Home.html"><img src="http://s13.postimg.org/cppd6w6uv/Screen_Shot_back_08_13_at_11_53_54_PM.jpg"></a></li>
+                 <li><a href="Home.html">Home</a></li>
+                     <li>FAQ</li>
+                  <li> <a href="NewPosts.html">New Post</a></li>
+                  <li>
+                    Track Popular Tags
+                    <ul>
+                        <li>PoliceBrutality </li>
+                      <li>LGBTQ </li>
+                      <li>#YesAllWomen</li>
+                      <li>Sexism</li>
+                      <li>EverydayRacism</li>
+                      <li>Classism</li>
+      
+                </ul>
+                  </li>
+                     <li>Contact</li>
+                   
+                  <li>Search Site and Post Archives</li>
+                  <li>
+                    Archives (by Month)
+                    <ul>
+                      <li>August 2014 </li> 
+      
+                </ul>
+                  </li>
+                </ul>
             
             <br></br>
             <br></br>
