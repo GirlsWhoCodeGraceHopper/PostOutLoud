@@ -1,7 +1,9 @@
-  
+ 
 var newPostList;
-$(document).ready(function(){
-	  $("#enter").click(function(){  
+$(document).ready(function(){ 
+ 
+	  $("#enter").click(function(){ 
+	     alert("yo3!");
 		var name= $("#displayname").val();
 		var email= $("#email").val();
 		var title= $("#title").val(); 
