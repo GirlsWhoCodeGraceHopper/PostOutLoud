@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>PostOutLoud</title>	
+<head>
+		<title>PostOutLoud</title>		
 		<meta name="viewport" content="width=device-width, initial-scale=1">			
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
         <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic|Oswald:700,400' rel='stylesheet' type='text/css'>		<script src="js/bootstrap.min.js"></script>		
-		<script src="jquery-1.11.1.min.js"></script>		
-		<script src="backendwbuttons.js"></script>		
+		<script src="jquery.js"></script>		
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>		
+		<script src="backend.js"></script>		
 		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
-	    <style>
+ 
+		<style>
 		 ul {
           text-align: center;
                     position: relative;
@@ -79,7 +81,8 @@
 				font-size: 14px;
 				color: #3D3d3d;
 				}  
-		</style>	
+		</style>
+		
 		<style scoped>
 				.button-success,
 				.button-error {
@@ -90,16 +93,19 @@
 				.button-success {
 					background: rgb(241,0,203);  
 					font-size: 150%;
-				    }
-				    .button-error {
+				}
+				.button-error {
 					background: rgb(255,63,225);  
 					font-size: 150%;
-					}
+				
+				}
 		</style>        
- 		<style type="text/css"> 
+        
+		
+		<style type="text/css"> 
 			.pic{ width:430px; height:100px; opacity: 1; filter: alpha(opacity=100) no-repeat; } 
-			.pic:hover { opacity: 0.7; filter: alpha(opacity=70); } 
-		</style>  
+			.pic:hover { opacity: 0.7; filter: alpha(opacity=70); } </style>  
+		      
         <style>
 			input[type=text] {padding:100 px; border:1px solid #ccc; 
 			-webkit-border-radius: 400 px;
@@ -109,17 +115,18 @@
 			 input[type=text]:focus {border-color:#333; }
 
  
-			input[type=submit] {
+			input[type=button] {
 				border: 1px solid #f44c0e;
 				color: #fff;
 				background: tomato;
 				padding: 20px 50px;
 				border-radius: 15px;
 			}
-			input[type=submit]:hover {
+			input[type=button]:hover {
 				background: #f44c0e;
 			}
-		</style>	
+
+		</style>
 				<style> 
 					A:link 
 					{ 
@@ -136,6 +143,7 @@
 					color: Blue; 
 					text-decoration: none; 
 				</style>			
+		 
 	</head>
 	<body style="background-color:#F0FFF0;">
 		<!--Firebase Script-->	 
@@ -186,17 +194,45 @@
 					<center>by astreaa 2</center>
 						<p> </p>
 						<p> The flaw in the (conventional) principle  of marriage lies in its definition as a recognized union between one man and one woman. The definition which is non-biased (and which we should adopt) would call marriage a union between a consenting adult and another consenting adult.</p>
-						<br>___________________________________________________________________________________________
-						<br> <br>Add A Comment:</b><br>
-						<form action="demo_form.asp">
-						Display Name: <input type="text" name="displayName" value=""><br>
-						Email: <input type="text" name="email" value=""><br>
-						Comment: <textarea rows="4" cols="50"></textarea><br>
-						<br>
-						<input type="submit">
-						</form>
-				</div>
-			 
+				</div> 
+						
+						
+						<div style="margin-left: 20%" ><br> <br><font size="3"><b>Add A Comment:</b></font><br></div>
+						 <form class="pure-form pure-form-aligned">
+					
+						<div style="margin-left: 20%" class="pure-control-group">
+							<label for="name">Display Name</label>
+							<input type="text"  id= "comdisplayname" placeholder="Display Name" required> 
+						</div>
+						 
+						   
+						
+                        <div  style="margin-left: 20%" class="pure-control-group">
+							<label for="email">Email Address</label>
+							<input id="comemail" type="email"  placeholder="you@email.com" required>
+						</div>
+						
+						  
+						  
+						 <div  style="margin-left: 20%" style="margin-left: 10%" class="pure-control-group">
+						  <label  for="post" >Comment:</label>
+							<textarea id="c" rows="5px" cols="50px" required></textarea>
+						 </div>
+						  
+
+						 
+                        
+						<div style="margin-left:25%">
+						 	<!--input type="submit" id="enter" value="Submit!"-->
+							<a href="#HomePage" style="text-decoration:none">
+							<input type="button" value="Submit" id="enter" >
+							</a>
+								<br><br><br><br><br><br><br><br><br><br>
+						
+						 </div>
+						
+				</form>		
+ 			 
 			</div>
 		</div>
 		<!--end of posted page-->
