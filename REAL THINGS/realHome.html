@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PostOutLoud</title>		
+		<meta name="viewport" content="width=device-width, initial-scale=1">			
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Permanent+Marker|Droid+Serif:400,700,400italic,700italic'>		
+		<script src="jquery.js"></script>		
+		<script src="backend.js"></script>		
+		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
+		<style>
+			body {
+				font-family: 'Droid Serif', serif;
+				font-size: 14px;
+				}
+		</style>		
+		
+		<style type="text/css"> 
+			.pic{ width:430px; height:100px; opacity: 1; filter: alpha(opacity=100) no-repeat; } 
+			.pic:hover { opacity: 0.7; filter: alpha(opacity=70); } </style>  
+		
+		<style>
+			input[type=text] {padding:100 px; border:1px solid #ccc; 
+			-webkit-border-radius: 400 px;
+				border-radius: 100px;
+			} 
+			
+			input[type=text]:focus {border-color:#333; } 
+			
+			input[type=submit] {
+				border: 1px solid #f44c0e;
+				color: #fff;
+				background: tomato;
+				padding: 20px 50px;
+				border-radius: 15px;
+			}
+			input[type=submit]:hover {
+				background: #f44c0e;
+			}
+		</style>		
+
+				<style> 
+					A:link 
+					{ 
+					color: Black; 
+					text-decoration: none; 
+					} 
+					A:visited 
+					{ 
+					color: Black; 
+					text-decoration: none; 
+					} 
+					A:hover 
+					{ 
+					color: Blue; 
+					text-decoration: none; 
+				</style>	
+	</head>
+	
+	<body onload="showPosts()" background="http://s30.postimg.org/d46hxjio1/image.png">
+		<!-- Home Page of App -->		
+		<div id="HomePage">		 		
+            <!-- Header of App -->
+			<div>
+				 
+				<br></br>				
+				<center>
+					<a href=""><img class="pic" id=".pic" src="http://s17.postimg.org/urnxtl7i7/Screen_Shot_back_08_13_at_11_53_54_PM.jpg"> </a> <br>
+						<a href="NewPosts.html"><button /*style="margin-left: 65%"*/ class="button-success pure-button">
+							<font style="font-family:Arial;font-weight: bold" >New Post</font>
+						</button></a>
+						<button /*style="margin-left: 0%"*/ class="button-error pure-button">
+							<font style="font-family:Arial;font-weight: bold" >FAQ</font>
+						</button>
+				</center>				 
+			</div>
+			<div>
+				<style>
+					.container{
+					height:700px;
+					width:100%;
+					 
+					}
+					.container div{
+					display: inline-block;
+					vertical-align: middle; 
+					} 
+					 .column-left{ width: 210px;   }
+ 					.column-center{ display: inline-block; width: 210px;  }
+					.column-center2{ display: inline-block; width: 210px;  }
+					.column-right{  width: 210px; }
+					
+				</style>
+				<div style="margin:0px 100px"  class="container">
+					    <div class="column-left" >
+						     <div id="1" style="margin:0px;padding: 0px"> <!--top post-->
+                                 <a href="post1.html">
+								 <font size="4" align="left"><b><b><div id="title1">Title</div></b></b></font>
+								 </a>
+							    <br>
+						        <font align="left"><div id="name1">Display Name</div></font>
+							    <br>							    <br>
+						        <font size="2" align="left"><div id="post1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></font>
+							 </div>
+								 <br><br><br><br> <br><br> <br><br>
+							<div id="2">
+							<a href="post2.html">
+						        <font size="4" align="left"><b><div id="title5"> Title</div></b></font>
+								</a>
+							    <br>
+						        <font align="left"><div id="name5">DisplayName</div></font>
+							    <br>							    <br>
+
+						        <font size="2" align="left"><div id="post5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>  </font>
+					        </div>
+					        
+					    </div>
+                        
+					    <div style="margin:70px" class="column-center">
+							 <div id="3" style="margin:0px;padding: 0px"> <!--top post-->
+							<a href="post3.html">
+						        <font size="4" align="left"><b><div id="title2">Title</div></b></font>
+							</a>
+							    <br>
+						        <font align="left"><div id="name2">DisplayName</div></font>
+							    <br>							    <br>
+
+						        <font size="2" align="left"><div id="post2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div> </font>
+							 </div> <br><br><br><br> <br><br> <br><br>
+							 <div id="4">
+							 <a href="post4.html">
+						        <font size="4" align="left"><b><div id="title6">Title</div></b></font>
+							</a>
+							    <br>
+						        <font align="left"><div id="name6">DisplayName</div></font>
+							    <br>							    <br>
+
+						        <font size="2" align="left"><div id="post6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </div> </font>
+					         </div>		
+						</div>
+					    
+					    <div style="margin: 0px" class="column-center2">
+							 	<div id="5" style="margin:0px;padding: 0px"> <!--top post-->
+								<a href="post5.html">
+									<font size="4" align="left"><b><div id="title3">Title</div></b></font>
+								</a>	
+									<br>
+									<font align="left"><div id="name3">DisplayName</div></font>
+									<br>							    <br>
+
+									<font size="2" align="left"><div id="post3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div> </font>
+							    </div> <br><br><br><br> <br><br> <br><br>
+							 <div id="6">
+							 <a href="post6.html">
+						        <font size="4" align="left"><b><div id="title7">Title</div></b></font>
+							</a>
+							    <br>
+						        <font align="left"><div id="name7">DisplayName</div></font>
+							    <br>							    <br>
+
+						        <font size="2" align="left"><div id="post7">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>  </font>
+					        </div>	
+					    </div>
+                        
+					    <div style="margin:60px" class="column-right">
+						 	<div id="7" style="margin:0px;padding:0px"> <!--top post-->
+							<a href="post7.html">
+						        <font size="4" align="left"><b><div id="title4">Title</div></b></font>
+							</a>
+							    <br>
+						        <font align="left"><div id="name4">DisplayName</div></font>
+							    <br>							    <br>
+
+						        <font size="2" align="left"><div id="post4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div></font>
+							</div> <br><br><br><br> <br><br> <br><br>
+							 <div id="8" >
+							 <a href="post8.html">
+						        <font size="4" align="left"><b><div id="title8">Michael Brown Was Struck at Least 6 Times?</div></b></font>
+							</a>
+							    <br>
+						        <font align="left"><div id="name8"> Posted by Descarado </div></font>
+							    <br>							    <br>
+
+						        <font size="2" align="left"><div id="post8"> The shooting of Michael Brown is incidental to a much larger, national story at play here- the media, with the help of some traveling professionals, whipping a local crowd into a frenzy day-after-day and creating an emotional spectacle to fill the voracious appetite of the television culture.</div>   </font>
+					        </div>						
+					    </div>
+				</div> 
+			</div>		
+		</div>       
+        <!-- End of Homepage -->
+	 
+     <!--no more pages-->		 
+	 <!--Firebase-->
+		<script>
+			var numPosts=0;
+			var myFirebaseRef = new Firebase("https://vivid-fire-1178.firebaseio.com/");
+			myFirebaseRef.once('value', function(dataSnapshot) {
+				dataSnapshot.forEach(function(messageSnapshot) {
+					numPosts=numPosts+1;
+				});
+			});
+		</script>
+	</body>
+</html>
