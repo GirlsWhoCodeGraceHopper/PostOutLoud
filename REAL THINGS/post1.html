@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>PostOutLoud</title>	
+<head>
+		<title>PostOutLoud</title>		
 		<meta name="viewport" content="width=device-width, initial-scale=1">			
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">		
-        <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic|Oswald:700,400' rel='stylesheet' type='text/css'>		
-		<script src="js/bootstrap.min.js"></script>		
-	    <style>
+        <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic|Oswald:700,400' rel='stylesheet' type='text/css'>		<script src="js/bootstrap.min.js"></script>		
+		<script src="jquery.js"></script>		
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>		
+		<script src="backend.js"></script>		
+		<!--firebase--> <script src="https://cdn.firebase.com/js/client/1.0.19/firebase.js"></script>
+ 
+		<style>
 		 ul {
           text-align: center;
                     position: relative;
@@ -77,7 +81,8 @@
 				font-size: 14px;
 				color: #3D3d3d;
 				}  
-		</style>	
+		</style>
+		
 		<style scoped>
 				.button-success,
 				.button-error {
@@ -88,16 +93,19 @@
 				.button-success {
 					background: rgb(241,0,203);  
 					font-size: 150%;
-				    }
-				    .button-error {
+				}
+				.button-error {
 					background: rgb(255,63,225);  
 					font-size: 150%;
-					}
+				
+				}
 		</style>        
- 		<style type="text/css"> 
+        
+		
+		<style type="text/css"> 
 			.pic{ width:430px; height:100px; opacity: 1; filter: alpha(opacity=100) no-repeat; } 
-			.pic:hover { opacity: 0.7; filter: alpha(opacity=70); } 
-		</style>  
+			.pic:hover { opacity: 0.7; filter: alpha(opacity=70); } </style>  
+		      
         <style>
 			input[type=text] {padding:100 px; border:1px solid #ccc; 
 			-webkit-border-radius: 400 px;
@@ -107,17 +115,18 @@
 			 input[type=text]:focus {border-color:#333; }
 
  
-			input[type=submit] {
+			input[type=button] {
 				border: 1px solid #f44c0e;
 				color: #fff;
 				background: tomato;
 				padding: 20px 50px;
 				border-radius: 15px;
 			}
-			input[type=submit]:hover {
+			input[type=button]:hover {
 				background: #f44c0e;
 			}
-		</style>		
+
+		</style>
 				<style> 
 					A:link 
 					{ 
@@ -134,16 +143,17 @@
 					color: Blue; 
 					text-decoration: none; 
 				</style>			
+		 
 	</head>
 	<body style="background-color:#F0FFF0;">
 		<!--Firebase Script-->	 
 	    <!--posted page-->     
-        <div id="FAQ"> 		
+        <div id="PostedPage"> 		
          <!-- Header of App -->
                  <ul style="margin: 0px 0px">
                                   <li><a href="Home.html"><img src="http://s13.postimg.org/cppd6w6uv/Screen_Shot_back_08_13_at_11_53_54_PM.jpg"></a></li>
                  <li><a href="Home.html">Home</a></li>
-                     <li>FAQ</li>
+                    <li><a href="FAQ.html">FAQ</a></li>
                   <li> <a href="NewPosts.html">New Post</a></li>
                   <li>
                     Track Popular Tags
@@ -180,26 +190,51 @@
 					padding:10px 40px; 
 					background: #e9cae4;
 					border-radius:15px;">
-					<center><h1>FAQ</h1>
-					Frequently Asked Questions About PostOutLoud</center>
-					<p><b>Who owns the content posted on PostOutLoud?</b></p>
-					All content posted on PostOutLoud is owned by the original poster. Please reach out to the original poster for permission before reproducing content elsewhere.
-					<p><b>Who owns the source code used in PostOutLoud?</b></p>
-					The code for this website was written by Jennifer & Sakura from Girls Who Code!
-					<p><b>Who is responsible for inaccurate and/or inappropriate material posted on PostOutLoud?</p></b>
-					Just as users of PostOutLoud hold the rights to what they post on PostOutLoud, they are also responsible for ensuring that the text and/or images and/or videos that they post on this website is accurate, appropriate, and aligned with the purpose of this website.
-					<p><b> So what is PostOutLoud for?</p></b>
-					PostOutLoud is a place for people to get together from all around the world to post about and discuss social justice issues within their own communities.
-					<p><b>What sort of audience is PostOutLoud for?</p></b>
-					PostOutLoud is intended for all audiences who are interested in engaging in discussions regarding social justice. It is a place for people to discuss their real-life experiences of homophobia, racism, sexism, transphobia, etc. and the ways in which the intersectionalities of all of these issues affect peoples' lives today. 
-					<p><b>How do I contact the creators of PostOutLoud?</p></b>
-					You can contact the creators using the form on our <a href="contact.html">contact</a> page.
-					<br><br>
-				</div>
-			 
+					<center><h1>Invisible Sexism?! </h1></center>
+					<center>Posted by spacemoth </center>
+						<p> </p>
+						<p> When I point out even the most obvious examples it’s met with denial & rage .Analysis of academic research on music videos suggests viewers are also more likely to adopt sexist attitudes themselves</p>
+				</div> 
+						
+						
+						<div style="margin-left: 20%" ><br> <br><font size="3"><b>Add A Comment:</b></font><br></div>
+						 <form class="pure-form pure-form-aligned">
+					
+						<div style="margin-left: 20%" class="pure-control-group">
+							<label for="name">Display Name</label>
+							<input type="text"  id= "comdisplayname" placeholder="Display Name" required> 
+						</div>
+						 
+						   
+						
+                        <div  style="margin-left: 20%" class="pure-control-group">
+							<label for="email">Email Address</label>
+							<input id="comemail" type="email"  placeholder="you@email.com" required>
+						</div>
+						
+						  
+						  
+						 <div  style="margin-left: 20%" style="margin-left: 10%" class="pure-control-group">
+						  <label  for="post" >Comment:</label>
+							<textarea id="c" rows="5px" cols="50px" required></textarea>
+						 </div>
+						  
+
+						 
+                        
+						<div style="margin-left:25%">
+						 	<!--input type="submit" id="enter" value="Submit!"-->
+							<a href="#HomePage" style="text-decoration:none">
+							<input type="button" value="Submit" id="enter" >
+							</a>
+								<br><br><br><br><br><br><br><br><br><br>
+						
+						 </div>
+						
+				</form>		
+ 			 
 			</div>
 		</div>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<!--end of posted page-->
 		<!--no more pages-->	 
 	</body>
