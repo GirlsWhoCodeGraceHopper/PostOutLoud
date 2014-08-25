@@ -1,4 +1,4 @@
-  
+
 var newPostList;
 $(document).ready(function(){
 	  $("#enter").click(function(){  
@@ -47,8 +47,7 @@ $(document).ready(function(){
 });
 
 //jQuery and JavaScript goes here
-
-//jQuery and JavaScript goes here
+ 
 
 function showPosts(){ 
  
